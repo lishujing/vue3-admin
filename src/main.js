@@ -3,7 +3,10 @@ import App from './App.vue'
 import router from './router'
 import store from './store'
 import installElementPlus from './plugins/element'
+// 初始化央视表
 import './styles/index.scss'
+// 导入内部图标
+import installIcons from '@/icons'
 
 /**
  * 1、通过按需导入的createApp方法来构建vue实例
@@ -13,4 +16,5 @@ import './styles/index.scss'
 */
 const app = createApp(App)
 installElementPlus(app)
+installIcons(app)
 app.use(store).use(router).mount('#app')

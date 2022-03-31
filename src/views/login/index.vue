@@ -6,22 +6,18 @@
       </div>
       <el-form-item>
         <span class="svg-container">
-          <svg-icon icon="https://res.lgdsunday.club/user.svg"></svg-icon>
+          <svg-icon icon="user"></svg-icon>
         </span>
         <el-input placeholder="username" name="username" type="text"></el-input>
       </el-form-item>
       <!-- password -->
       <el-form-item>
         <span class="svg-container">
-          <el-icon>
-            <avatar />
-          </el-icon>
+          <svg-icon icon="password"></svg-icon>
         </span>
         <el-input placeholder="password" name="password"></el-input>
         <span class="show-pwd">
-          <el-icon>
-            <avatar />
-          </el-icon>
+          <svg-icon icon="eye"></svg-icon>
         </span>
       </el-form-item>
       <!-- 登录按钮 -->
