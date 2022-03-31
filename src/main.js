@@ -3,6 +3,7 @@ import App from './App.vue'
 import router from './router'
 import store from './store'
 import installElementPlus from './plugins/element'
+import './styles/index.scss'
 
 /**
  * 1、通过按需导入的createApp方法来构建vue实例
