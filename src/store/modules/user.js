@@ -14,7 +14,7 @@ const actions = {
   login(context, userInfo) {
     const { username, password } = userInfo
     return new Promise((resolve, reject) => {
-      this.login({
+      login({
         username,
         password: md5(password)
       })
