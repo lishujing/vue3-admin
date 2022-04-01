@@ -6,6 +6,7 @@ import { login } from '@/api/sys'
 import md5 from 'md5'
 import { setItem, getItem } from '@/utils/storage'
 import { TOKEN } from '@/constant'
+import router from '@/router'
 
 const state = () => {
   return {
@@ -33,6 +34,8 @@ const actions = {
       })
         .then((data) => {
           this.commit('user/setToken', data.token)
+          // 登录成功跳转
+          router.push('/')
           resolve()
         })
         .catch((err) => {
