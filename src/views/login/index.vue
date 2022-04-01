@@ -16,17 +16,26 @@
         ></el-input>
       </el-form-item>
       <!-- password -->
+
+      <!-- 功能原理：
+        实现密码框 密文/明文 两种状态的切换，可通过动态切换 input 的 type 类型即可实现
+        当 type = 'password' 为密文显示
+        当 type = 'text' 为明文显示
+       -->
       <el-form-item prop="password">
         <span class="svg-container">
           <svg-icon icon="password"></svg-icon>
         </span>
         <el-input
+          :type="passwordType"
           placeholder="password"
           name="password"
           v-model="loginForm.password"
         ></el-input>
-        <span class="show-pwd">
-          <svg-icon icon="eye"></svg-icon>
+        <span class="show-pwd" @click="onChangePwdType">
+          <svg-icon
+            :icon="passwordType === 'password' ? 'eye' : 'eye-open'"
+          ></svg-icon>
         </span>
       </el-form-item>
       <!-- 登录按钮 -->
@@ -62,6 +71,19 @@ const loginRules = ref({
     }
   ]
 })
+
+// 处理密码框文本显示
+const passwordType = ref('password')
+// template 中绑定的方法，直接声明即可
+const onChangePwdType = () => {
+  // 当 passwordType 的值为 password 的时候，改为 text
+  // 使用 ref 声明的数据，在 script 中使用时，需要加 value 来获取具体的值，但是在template 中使用的时候，则不需要加value
+  if (passwordType.value === 'password') {
+    passwordType.value = 'text'
+  } else {
+    passwordType.value = 'password'
+  }
+}
 </script>
 
 <style lang="scss" scoped>
@@ -131,7 +153,6 @@ $cursor: #fff;
   .show-pwd {
     position: absolute;
     right: 10px;
-    top: 7px;
     font-size: 16px;
     color: $dark_gray;
     cursor: pointer;
