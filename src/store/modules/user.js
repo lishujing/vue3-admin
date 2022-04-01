@@ -4,8 +4,21 @@
  */
 import { login } from '@/api/sys'
 import md5 from 'md5'
+import { setItem, getItem } from '@/utils/storage'
+import { TOKEN } from '@/constant'
 
-const mutations = {}
+const state = () => {
+  return {
+    token: getItem(TOKEN) || ''
+  }
+}
+
+const mutations = {
+  setToken(state, token) {
+    state.token = token
+    setItem(TOKEN, token)
+  }
+}
 
 const actions = {
   /**
@@ -19,6 +32,7 @@ const actions = {
         password: md5(password)
       })
         .then((data) => {
+          this.commit('user/setToken', data.data.data.token)
           resolve()
         })
         .catch((err) => {
@@ -30,7 +44,7 @@ const actions = {
 
 export default {
   namespaced: true,
-  state: () => ({}),
+  state,
   mutations,
   actions
 }
