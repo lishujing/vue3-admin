@@ -20,7 +20,7 @@
             <a target="_blank" href="">
               <el-dropdown-item>作者博客</el-dropdown-item>
             </a>
-            <el-dropdown-item divided> 退出登录 </el-dropdown-item>
+            <el-dropdown-item divided @click="logout()"> 退出登录 </el-dropdown-item>
           </el-dropdown-menu>
         </template>
       </el-dropdown>
@@ -29,7 +29,13 @@
 </template>
 
 <script setup>
+import { useStore } from 'vuex'
 import {} from 'vue'
+
+const store = useStore()
+const logout = () => {
+  store.dispatch('user/logout')
+}
 </script>
 
 <style lang="scss" scoped>
