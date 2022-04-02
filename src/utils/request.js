@@ -1,5 +1,6 @@
 import axios from 'axios'
 import { ElMessage } from 'element-plus'
+import store from '@/store'
 
 const service = axios.create({
   baseURL: process.env.VUE_APP_BASE_API,
@@ -7,12 +8,22 @@ const service = axios.create({
 })
 
 // 请求拦截器
-service.interceptors.request.use((config) => {
-  // 添加 icode
-  config.headers.icode = 'D07E8BA436F145CB'
-  // 必须返回 config
-  return config
-})
+service.interceptors.request.use(
+  (config) => {
+    // 添加 icode
+    config.headers.icode = 'D07E8BA436F145CB'
+    // 在这个位置统一的去注入token
+    if (store.getters.token) {
+      // 如果token存在 注入token
+      config.headers.Authorization = `Bearer ${store.getters.token}`
+    }
+    // 必须返回 config
+    return config
+  },
+  (error) => {
+    return Promise.reject(error)
+  }
+)
 
 // 响应拦截器
 service.interceptors.response.use(

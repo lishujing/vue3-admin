@@ -2,7 +2,7 @@
  * store/modules/user.js
  * 用于处理所有 和 用户相关 的内容
  */
-import { login } from '@/api/sys'
+import { login, getUserInfo } from '@/api/sys'
 import md5 from 'md5'
 import { setItem, getItem } from '@/utils/storage'
 import { TOKEN } from '@/constant'
@@ -10,7 +10,8 @@ import router from '@/router'
 
 const state = () => {
   return {
-    token: getItem(TOKEN) || ''
+    token: getItem(TOKEN) || '',
+    userInfo: {}
   }
 }
 
@@ -18,6 +19,9 @@ const mutations = {
   setToken(state, token) {
     state.token = token
     setItem(TOKEN, token)
+  },
+  setUserInfo(state, userInfo) {
+    state.userInfo = userInfo
   }
 }
 
@@ -42,6 +46,14 @@ const actions = {
           reject(err)
         })
     })
+  },
+  /**
+   * 获取用户信息
+   */
+  async getUserInfo(context) {
+    const res = await getUserInfo()
+    this.commit('user/setUserInfo', res)
+    return res
   }
 }
 
