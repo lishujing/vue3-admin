@@ -1,13 +1,14 @@
 <template>
-  <div>sidebar</div>
+  <div class="">
+    <h1>占位</h1>
+    <el-scrollbar>
+      <sidebar-menu></sidebar-menu>
+    </el-scrollbar>
+  </div>
 </template>
 
-<script>
-export default {
-
-}
+<script setup>
+import SidebarMenu from './SidebarMenu'
 </script>
 
-<style>
-
-</style>
+<style></style>
