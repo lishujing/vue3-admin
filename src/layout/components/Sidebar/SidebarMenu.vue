@@ -7,6 +7,7 @@
     :background-color="$store.getters.cssVar.menuBg"
     :text-color="$store.getters.cssVar.menuText"
     :active-text-color="$store.getters.cssVar.menuActiveText"
+    :collapse="!$store.getters.sidebarOpened"
   >
     <sidebar-item
       v-for="item in routes"
