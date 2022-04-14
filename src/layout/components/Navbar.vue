@@ -1,15 +1,17 @@
 <template>
   <div class="navbar">
     <hamburger class="hamburger-container"></hamburger>
+    <breadcrumb class="breadcrumb-container"></breadcrumb>
     <div class="right-menu">
       <!-- 头像 -->
       <el-dropdown class="avatar-container" trigger="click">
         <div class="avatar-wrapper">
-          <el-avatar
+          <!-- <el-avatar
             shape="square"
             :size="40"
             :src="$store.getters.userInfo.avatar"
-          ></el-avatar>
+          ></el-avatar> -->
+          <img src="@/assets/images/img_header.jpg" />
           <i class="el-icon-s-tools"></i>
         </div>
         <template #dropdown>
@@ -35,6 +37,7 @@
 import {} from 'vue'
 import { useStore } from 'vuex'
 import Hamburger from '@/components/Hamburger'
+import Breadcrumb from '@/components/Breadcrumb'
 
 const store = useStore()
 const logout = () => {
@@ -65,6 +68,11 @@ const logout = () => {
           --el-avatar-background-color: none; // element-plus 自带的颜色背景
           margin-right: 12px;
         }
+        img {
+          width: 40px;
+          height: 40px;
+          margin-right: 12px;
+        }
       }
     }
   }
@@ -79,6 +87,10 @@ const logout = () => {
     &:hover {
       background: rgb(0, 0, 0, 0.1);
     }
+  }
+
+  .breadcrumb-container {
+    float: left;
   }
 }
 </style>
