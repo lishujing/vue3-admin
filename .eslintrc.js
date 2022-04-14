@@ -27,6 +27,7 @@ module.exports = {
     'space-before-function-paren': 'off',
     'comma-dangle': 'off',
     'vue/multi-word-component-names': 'off',
-    'no-unused-vars': 'off'
+    'no-unused-vars': 'off',
+    'no-tabs': 'off'
   }
 }
