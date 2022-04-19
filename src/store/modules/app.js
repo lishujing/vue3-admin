@@ -14,7 +14,7 @@ const mutations = {
   /**
    * 设置国际化
    */
-  setLanguague(state, lang) {
+  setLanguage(state, lang) {
     setItem(LANG, lang)
     state.language = lang
   }
