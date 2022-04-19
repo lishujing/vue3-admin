@@ -18,14 +18,14 @@
         <template #dropdown>
           <el-dropdown-menu class="user-dropdown">
             <router-link to="/">
-              <el-dropdown-item> 首页 </el-dropdown-item>
+              <el-dropdown-item> {{$t('msg.navBar.home')}} </el-dropdown-item>
             </router-link>
             <!-- 外链使用 a 标签 -->
             <a target="_blank" href="">
-              <el-dropdown-item>作者博客</el-dropdown-item>
+              <el-dropdown-item>{{$t('msg.navBar.course')}}</el-dropdown-item>
             </a>
             <el-dropdown-item divided @click="logout()">
-              退出登录
+              {{$t('msg.navBar.logout')}}
             </el-dropdown-item>
           </el-dropdown-menu>
         </template>

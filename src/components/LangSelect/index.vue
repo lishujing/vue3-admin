@@ -5,7 +5,7 @@
     @command="handlerSetLanguage"
   >
     <div>
-      <el-tooltip content="国际化" :effect="effect">
+      <el-tooltip :content="$t('msg.navBar.lang')" :effect="effect">
         <svg-icon icon="language" />
       </el-tooltip>
     </div>
@@ -48,6 +48,6 @@ const i18n = useStore()
 const handlerSetLanguage = (lang) => {
   i18n.local.value = lang
   store.commit('app/setLanguage', lang)
-  ElMessage.success('更新成功')
+  ElMessage.success(i18n.t('msg.toast.switchLangSuccess'))
 }
 </script>

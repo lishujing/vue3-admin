@@ -7,7 +7,7 @@
       :rules="loginRules"
     >
       <div class="title-container">
-        <h3 class="title">用户登录</h3>
+        <h3 class="title">{{$t('msg.login.title')}}</h3>
       </div>
       <el-form-item prop="username">
         <span class="svg-container">
@@ -49,8 +49,10 @@
         style="width: 100%; margin-bottom: 30px"
         :loading="loading"
         @click="handlerLogin"
-        >登录</el-button
+        >{{ $t('msg.login.loginBtn') }}</el-button
       >
+
+      <!-- <div class="tips" v-html="$t('msg.login.desc')"></div> -->
     </el-form>
   </div>
 </template>
@@ -58,6 +60,7 @@
 <script setup>
 import { ref } from 'vue'
 import { useStore } from 'vuex'
+import { useI18n } from 'vue-i18n'
 import { validatePassword } from './rules'
 // 数据源
 const loginForm = ref({
@@ -65,12 +68,13 @@ const loginForm = ref({
   password: '123456'
 })
 // 验证规则
+const i18n = useI18n()
 const loginRules = ref({
   username: [
     {
       required: true,
       trigger: 'blur',
-      message: '用户名为必填项'
+      message: i18n.t('msg.login.usernameRule')
     }
   ],
   password: [
