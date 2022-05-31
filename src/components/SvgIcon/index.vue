@@ -46,16 +46,18 @@ const iconName = computed(() => `#icon-${props.icon}`)
 </script>
 
 <style lang="scss" scoped>
+@import '~@/styles/variables.module.scss';
+
 .svg-icon {
   width: 1em;
   height: 1em;
   vertical-align: -0.15em;
-  fill: currentColor;
+  fill: #{$mainTextColor}; // currentColor;
   overflow: hidden;
 }
 
 .svg-external-icon {
-  background-color: currentColor;
+  background-color: #{$mainTextColor}; // currentColor;
   mask-size: cover !important;
   display: inline-block;
 }

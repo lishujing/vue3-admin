@@ -30,7 +30,8 @@ export default {
     articleRanking: '文章排名',
     articleCreate: '创建文章',
     articleDetail: '文章详情',
-    articleEditor: '文章编辑'
+    articleEditor: '文章编辑',
+    design: '设计平台'
   },
   toast: {
     switchLangSuccess: '切换语言成功'

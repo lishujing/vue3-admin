@@ -2,8 +2,8 @@
   <div class="">
     <div class="logo-container">
       <!-- <el-avatar :size="logoHeight" shape="square" src="https://m.imooc.com/static/wap/static/common/img/logo-small@2x.png"></el-avatar> -->
-      <img src="@/assets/images/logo.jpg" />
-      <h1 class="logo-title" v-if="$store.getters.sidebarOpened">爷乐意</h1>
+      <!-- <img src="@/assets/images/logo.jpg" /> -->
+      <h1 class="logo-title" v-if="$store.getters.sidebarOpened">智能云设计平台</h1>
     </div>
     <el-scrollbar>
       <sidebar-menu></sidebar-menu>

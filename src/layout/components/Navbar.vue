@@ -22,9 +22,9 @@
               <el-dropdown-item> {{$t('msg.navBar.home')}} </el-dropdown-item>
             </router-link>
             <!-- 外链使用 a 标签 -->
-            <a target="_blank" href="">
+            <!-- <a target="_blank" href="">
               <el-dropdown-item>{{$t('msg.navBar.course')}}</el-dropdown-item>
-            </a>
+            </a> -->
             <el-dropdown-item divided @click="logout()">
               {{$t('msg.navBar.logout')}}
             </el-dropdown-item>
@@ -50,11 +50,13 @@ const logout = () => {
 </script>
 
 <style lang="scss" scoped>
+@import '~@/styles/variables.module.scss';
+
 .navbar {
   height: 50px;
   overflow: hidden;
   position: relative;
-  background: #fff;
+  background: #{$navBg};
   box-shadow: 0 1px 4px rgba(0, 21, 41, 0.08);
 
   .right-menu {
@@ -84,7 +86,7 @@ const logout = () => {
       display: inline-block;
       padding: 0 18px 0 0;
       font-size: 24px;
-      color: #5a5e66;
+      color: #{$mainTextColor}; // #5a5e66;
       vertical-align: text-bottom;
 
       &.hover-effect {

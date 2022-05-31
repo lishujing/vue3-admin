@@ -28,6 +28,7 @@ module.exports = {
     'comma-dangle': 'off',
     'vue/multi-word-component-names': 'off',
     'no-unused-vars': 'off',
-    'no-tabs': 'off'
+    'no-tabs': 'off',
+    'key-spacing': 'off'
   }
 }
