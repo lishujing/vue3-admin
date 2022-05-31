@@ -16,17 +16,17 @@ import WindowCard from '@/components/cards/WindowCard.vue'
 
 const cards = [
   {
-    id: '0',
+    id: 1,
     title: '大屏设计',
     description: '自定义大屏设计',
-    pageUrl: 'http://localhost:9528/',
+    pageUrl: '/extra-platform/1',
     bgImage: 'data_card_bg_1'
   },
   {
-    id: '1',
+    id: 2,
     title: ' H5设计',
     description: '',
-    pageUrl: 'http://127.0.0.1:8082/',
+    pageUrl: '/extra-platform/2',
     bgImage: 'h5_card_bg'
   }
 ]

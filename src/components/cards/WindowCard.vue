@@ -10,6 +10,7 @@
 
 <script setup>
 import { defineProps, onMounted, ref } from 'vue'
+import { useRouter } from 'vue-router'
 const props = defineProps({
   title: {
     type: String,
@@ -19,11 +20,11 @@ const props = defineProps({
     type: String,
     defualt: ''
   },
-  pageUrl:{
+  pageUrl: {
     type: String,
     defualt: './'
   },
-  bgImage:{
+  bgImage: {
     type: String,
     defualt: ''
   }
@@ -36,13 +37,15 @@ onMounted(() => {
     bgImageUrl.value = `url(${imageUrl})`
   }
 })
+
+const router = useRouter()
 const goToNextPage = () => {
-  window.location.href = props.pageUrl
+  // window.location.href = props.pageUrl
+  router.push({ path: props.pageUrl })
 }
 </script>
 
 <style lang="scss" scope>
-
 .window-card {
   background: #fff;
   color: #fff;
@@ -76,13 +79,13 @@ const goToNextPage = () => {
     padding: 10px;
     width: 100%;
     text-align: center;
-    background: rgb(38,52,69,0.9);
+    background: rgb(38, 52, 69, 0.9);
     border-radius: 0 0 15px 12px;
   }
 }
 .window-card:hover {
   transform: scale(1.04);
-  transition: transform .8s cubic-bezier(.27,0,0,1);
+  transition: transform 0.8s cubic-bezier(0.27, 0, 0, 1);
   cursor: pointer;
 }
 </style>

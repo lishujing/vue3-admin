@@ -5,6 +5,10 @@ import Layout from '@/layout/index.vue'
  * 私有路由表
  */
 const privateRoutes = [
+  {
+    path: '/extra-platform/:id',
+    component: () => import('@/views/extra-platform/index')
+  }
   // {
   //   path: '/user',
   //   component: Layout,

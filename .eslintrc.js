@@ -29,6 +29,7 @@ module.exports = {
     'vue/multi-word-component-names': 'off',
     'no-unused-vars': 'off',
     'no-tabs': 'off',
-    'key-spacing': 'off'
+    'key-spacing': 'off',
+    quotes: 'off'
   }
 }
