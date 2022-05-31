@@ -12,12 +12,12 @@ const urlArr = [
   {
     id: 1,
     title: '智能云数据化设计',
-    url: 'http://localhost:9528/#/index'
+    url: '/dataPage/#/index'
   },
   {
     id: 2,
     title: '智能云H5设计',
-    url: 'http://127.0.0.1:8082/#/hello-world'
+    url: '/H5/#/hello-world'
   }
 ]
 

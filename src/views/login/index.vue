@@ -64,8 +64,8 @@ import { useI18n } from 'vue-i18n'
 import { validatePassword } from './rules'
 // 数据源
 const loginForm = ref({
-  username: 'super-admin',
-  password: '123456'
+  username: 'guest',
+  password: 'guest',
 })
 // 验证规则
 const i18n = useI18n()
