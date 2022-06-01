@@ -1,15 +1,15 @@
 <template>
-  <!-- 展示外部图标 -->
-  <div
-    v-if="isExternal"
-    :style="styleExternalIcon"
-    class="svg-external-icon svg-icon"
-    :class="className"
-  ></div>
-  <!-- 展示内部图标 -->
-  <svg v-else class="svg-icon" :class="className" aria-hidden="true">
-    <use :xlink:href="iconName" />
-  </svg>
+	<!-- 展示外部图标 -->
+	<div
+		v-if="isExternal"
+		:style="styleExternalIcon"
+		class="svg-external-icon svg-icon"
+		:class="className"
+	></div>
+	<!-- 展示内部图标 -->
+	<svg v-else class="svg-icon" :class="className" aria-hidden="true">
+		<use :xlink:href="iconName" />
+	</svg>
 </template>
 
 <script setup>
@@ -19,13 +19,13 @@ const props = defineProps({
   // icon 图标
   icon: {
     type: String,
-    required: true
+    required: true,
   },
   // 图标类名
   className: {
     type: String,
-    default: ''
-  }
+    default: '',
+  },
 })
 
 /**
@@ -37,7 +37,7 @@ const isExternal = computed(() => external(props.icon))
  */
 const styleExternalIcon = computed(() => ({
   mask: `url(${props.icon}) no-repeat 50% 50%`,
-  '-webkit-mask': `url(${props.icon}) no-repeat 50% 50%`
+  '-webkit-mask': `url(${props.icon}) no-repeat 50% 50%`,
 }))
 /**
  * 项目内部图标
@@ -49,16 +49,20 @@ const iconName = computed(() => `#icon-${props.icon}`)
 @import '~@/styles/variables.module.scss';
 
 .svg-icon {
-  width: 1em;
-  height: 1em;
-  vertical-align: -0.15em;
-  fill: #{$mainTextColor}; // currentColor;
-  overflow: hidden;
+	width: 1em;
+	height: 1em;
+	vertical-align: -0.15em;
+	fill: #{$mainTextColor}; // currentColor;
+	overflow: hidden;
 }
 
 .svg-external-icon {
-  background-color: #{$mainTextColor}; // currentColor;
-  mask-size: cover !important;
-  display: inline-block;
+	background-color: #{$mainTextColor}; // currentColor;
+	mask-size: cover !important;
+	display: inline-block;
+}
+
+.show-pwd-icon {
+	fill: #889aa4;
 }
 </style>

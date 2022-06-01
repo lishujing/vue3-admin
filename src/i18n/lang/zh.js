@@ -3,7 +3,7 @@ export default {
     title: '用户登录',
     loginBtn: '登录',
     usernameRule: '用户名为必填项',
-    passwordRule: '密码不能少于6位',
+    passwordRule: '密码不能少于2位',
     desc: `
     测试权限账号：<br />
     提供三种权限账号：<br />
@@ -16,7 +16,7 @@ export default {
     可使用导入的用户名登录 <br />
     密码统一为：123456  <br />
     <b>注意：导入用户区分中英文库！！！！</b>
-    `
+    `,
   },
   route: {
     profile: '个人中心',
@@ -31,23 +31,23 @@ export default {
     articleCreate: '创建文章',
     articleDetail: '文章详情',
     articleEditor: '文章编辑',
-    design: '设计平台'
+    design: '设计平台',
   },
   toast: {
-    switchLangSuccess: '切换语言成功'
+    switchLangSuccess: '切换语言成功',
   },
   tagsView: {
     refresh: '刷新',
     closeRight: '关闭右侧',
-    closeOther: '关闭其他'
+    closeOther: '关闭其他',
   },
   theme: {
     themeColorChange: '主题色更换',
-    themeChange: '主题更换'
+    themeChange: '主题更换',
   },
   universal: {
     confirm: '确定',
-    cancel: '取消'
+    cancel: '取消',
   },
   navBar: {
     themeChange: '主题修改',
@@ -57,7 +57,7 @@ export default {
     guide: '功能引导',
     home: '首页',
     course: '课程主页',
-    logout: '退出登录'
+    logout: '退出登录',
   },
   guide: {
     close: '关闭',
@@ -80,7 +80,7 @@ export default {
     tagTitle: '标签',
     tagDesc: '已打开页面标签',
     sidebarTitle: '菜单',
-    sidebarDesc: '项目功能菜单'
+    sidebarDesc: '项目功能菜单',
   },
   profile: {
     muted: '《vue3 改写 vue-element-admin，实现后台前端综合解决方案》项目演示',
@@ -93,7 +93,7 @@ export default {
     name: 'Sunday',
     job: '一个前端开发程序猿',
     Introduction:
-      '高级技术专家，曾就职于国内一线互联网公司，统筹过的多个大型项目用户数已过千万级。致力于研究大前端技术，多次受邀参加国内前端技术分享会，如：2018 年 Google 中国技术分享会。'
+			'高级技术专家，曾就职于国内一线互联网公司，统筹过的多个大型项目用户数已过千万级。致力于研究大前端技术，多次受邀参加国内前端技术分享会，如：2018 年 Google 中国技术分享会。',
   },
   userInfo: {
     print: '打印',
@@ -109,11 +109,11 @@ export default {
     experience: '经历',
     major: '专业',
     glory: '荣耀',
-    foot: '签字：___________日期:___________'
+    foot: '签字：___________日期:___________',
   },
   uploadExcel: {
     upload: '点击上传',
-    drop: '将文件拖到此处'
+    drop: '将文件拖到此处',
   },
   excel: {
     importExcel: 'excel 导入',
@@ -138,7 +138,7 @@ export default {
     importSuccess: ' 条员工数据导入成功',
     dialogTitle1: '确定要删除用户 ',
     dialogTitle2: ' 吗？',
-    roleDialogTitle: '配置角色'
+    roleDialogTitle: '配置角色',
   },
   role: {
     buttonTxt: '新增角色',
@@ -151,12 +151,12 @@ export default {
     dialogTitle: '新增角色',
     dialogRole: '角色名称',
     dialogDesc: '角色描述',
-    updateRoleSuccess: '用户角色更新成功'
+    updateRoleSuccess: '用户角色更新成功',
   },
   permission: {
     name: '权限名称',
     mark: '权限标识',
-    desc: '权限描述'
+    desc: '权限描述',
   },
   article: {
     ranking: '排名',
@@ -178,6 +178,6 @@ export default {
     commit: '提交',
     createSuccess: '文章创建成功',
     editorSuccess: '文章修改成功',
-    sortSuccess: '文章排名修改成功'
-  }
+    sortSuccess: '文章排名修改成功',
+  },
 }
