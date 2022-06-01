@@ -12,7 +12,7 @@ const urlArr = [
   {
     id: 1,
     title: '智能云数据化设计',
-    url: '/dataPage/#/index'
+    url: '/data_pages/#/index'
   },
   {
     id: 2,
