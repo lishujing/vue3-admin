@@ -3,7 +3,7 @@
     <hamburger class="hamburger-container"></hamburger>
     <breadcrumb class="breadcrumb-container"></breadcrumb>
     <div class="right-menu">
-      <theme-picker class="right-menu-item hover-effect"></theme-picker>
+      <!-- <theme-picker class="right-menu-item hover-effect"></theme-picker> -->
       <lang-select class="right-menu-item hover-effect" />
       <!-- 头像 -->
       <el-dropdown class="avatar-container" trigger="click">
