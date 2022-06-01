@@ -269,11 +269,12 @@ div{
 	.login-title {
 		width: 100%;
 		height: 60px;
-		padding: 10px 60px;
+    padding: 0px 60px;
 		display: flex;
 		align-items: center;
 		img {
-			width: 10%;
+      height: 100%;
+      width: auto;
 			display: block;
 		}
 	}
